@@ -19,22 +19,14 @@
 
   <!-- A-frame shack -->
   <g>
-    <!-- walls -->
     <path d="M94 252 h324 v160 a20 20 0 0 1 -20 20 h-284 a20 20 0 0 1 -20 -20 z" fill="#8B5E3C"/>
-    <!-- roof -->
     <path d="M256 92 L420 256 L92 256 Z" fill="url(#roof)"/>
-    <!-- roof ridge highlight -->
     <path d="M256 92 L420 256 L414 256 L256 104 Z" fill="#A8734B" opacity="0.5"/>
-    <!-- door frame -->
     <rect x="200" y="306" width="112" height="158" rx="54" fill="#3A2718"/>
   </g>
 
   <!-- yak -->
   <g>
-    <!-- horns (cream, brown tips) -->
-    <path d="M216 296 C188 250 156 226 150 190 C148 176 164 172 176 188 C192 214 210 244 228 282 Z" fill="#F4EEE2"/>
-    <path d="M296 296 C324 250 356 226 362 190 C364 176 348 172 336 188 C320 214 302 244 284 282 Z" fill="#F4EEE2"/>
-
     <!-- shaggy fur head -->
     <path d="M256 276
              C210 276 190 300 190 340
@@ -44,14 +36,15 @@
              L322 300 C322 276 302 276 256 276 Z"
           fill="url(#fur)"/>
 
-    <!-- forehead fur tufts -->
-    <path d="M226 300 L236 282 L246 298 M266 298 L276 282 L286 300" stroke="#9A6B34" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <!-- horns (on top of the head, thick tapered crescents) -->
+    <path d="M 244 278 C 204 248 160 214 118 186 C 148 206 182 250 208 298 Z" fill="#F4EEE2" stroke="#6B4226" stroke-width="5"/>
+    <path d="M 268 278 C 308 248 352 214 394 186 C 364 206 330 250 304 298 Z" fill="#F4EEE2" stroke="#6B4226" stroke-width="5"/>
 
     <!-- eyes -->
-    <circle cx="231" cy="340" r="8" fill="#2E1C10"/>
-    <circle cx="281" cy="340" r="8" fill="#2E1C10"/>
-    <circle cx="234" cy="337" r="2.6" fill="#fff" opacity="0.85"/>
-    <circle cx="284" cy="337" r="2.6" fill="#fff" opacity="0.85"/>
+    <circle cx="231" cy="342" r="8" fill="#2E1C10"/>
+    <circle cx="281" cy="342" r="8" fill="#2E1C10"/>
+    <circle cx="234" cy="339" r="2.6" fill="#fff" opacity="0.85"/>
+    <circle cx="284" cy="339" r="2.6" fill="#fff" opacity="0.85"/>
 
     <!-- muzzle -->
     <ellipse cx="256" cy="392" rx="42" ry="28" fill="#F0E2CB"/>
