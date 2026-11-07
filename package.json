@@ -3,6 +3,7 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate",
+    "postgenerate": "node scripts/clean-spa-fallbacks.mjs",
     "start": "node .output/server/index.mjs",
     "test": "vitest run",
     "test:watch": "vitest",

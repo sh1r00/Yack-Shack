@@ -38,5 +38,11 @@ mock Apollo link — no Shopify credentials required.
 - `viral-m3-aesthetics` · `input-aware-interactions` · `zeitgeist-aesthetics`
 - `nuxt4-development` · `nuxt4-seo` · `webapp-security-hardening` · `interaction-feedback` · `nuxt4-pwa-pitfalls`
 
+## Deploy (Cloudflare Pages)
+- **Static SPA** — `npm run generate` → `.output/public` (postgenerate strips Nuxt's `404.html`/`200.html`, which otherwise override the SPA fallback and 404 deep links on Cloudflare).
+- `public/_redirects` (`/* /index.html 200`) provides SPA client-route fallback.
+- Deploy: `npx wrangler pages deploy .output/public --project-name yack-shack --branch main` (auth via `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`).
+- **Live:** https://yack-shack.pages.dev · **Repo:** https://github.com/sh1r00/Yack-Shack
+
 ## Definition of done
 `npm run test` passes + `npm run build` succeeds + committed + pushed.
