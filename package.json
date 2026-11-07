@@ -1,0 +1,56 @@
+{
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "start": "node .output/server/index.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "get-shopify-fragment-types": "node ./apollo/schemaQuery.mjs"
+  },
+  "name": "sh1r00-shopify",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.13"
+  },
+  "devDependencies": {
+    "@heroicons/vue": "1.0.5",
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/fontaine": "^0.5.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@shopify/theme-images": "^4.1.1",
+    "@storefront-ui/typography": "^2.3.1",
+    "@vite-pwa/nuxt": "^1.1.1",
+    "@vue/test-utils": "^2.4.11",
+    "@vueuse/nuxt": "^10.3.0",
+    "autoprefixer": "^10.4.1",
+    "dotenv": "^16.3.1",
+    "graphql": "^16.2.0",
+    "graphql-tag": "^2.12.6",
+    "happy-dom": "^20.10.6",
+    "node-fetch": "^3.1.0",
+    "nuxt-security": "^2.6.0",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.8",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.6",
+    "@nuxt/content": "^3.15.0",
+    "@nuxt/kit": "^3.7.4",
+    "@nuxtjs/robots": "^6.1.2",
+    "@storefront-ui/vue": "^2.6.0",
+    "@vue/apollo-composable": "^4.0.0-beta.11",
+    "better-sqlite3": "^12.11.1",
+    "nanoid": "^5.0.2",
+    "nuxt": "^4.0.0",
+    "nuxt-lazy-hydrate": "^1.0.0",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate-2": "^2.0.14",
+    "sitemap": "^7.1.1",
+    "tw-elements": "^1.0.0",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
+}

@@ -1,0 +1,21 @@
+node_modules
+
+.nuxt
+nuxt.d.ts
+.output
+.env
+.DS_Store
+.layer0
+.vscode
+public/sw.*
+sw.*
+dist
+logs
+*.log
+# Local Netlify folder
+.netlify
+
+# Environment files
+.env
+.env.*
+!.env.example
