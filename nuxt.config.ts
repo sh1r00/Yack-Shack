@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         { name: 'description', content: process.env.APP_DESCRIPTION || 'Luxurious yak fur goods — blankets, apparel & home decor spun from Himalayan yak.' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/icons/72.webp' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/icons/yak-logo.svg' },
         {
           rel: 'preconnect',
           href: 'https://fonts.gstatic.com',
@@ -137,6 +137,7 @@ export default defineNuxtConfig({
         },
       ],
       icons: [
+        { src: '/icons/yak-logo.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
         { src: '/icons/48.webp', sizes: '48x48', type: 'image/webp', purpose: 'maskable' },
         { src: '/icons/72.webp', sizes: '72x72', type: 'image/webp', purpose: 'maskable' },
         { src: '/icons/96.webp', sizes: '96x96', type: 'image/webp', purpose: 'maskable' },

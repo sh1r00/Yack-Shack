@@ -60,7 +60,7 @@ const navConfig = {
   title: 'Yack-Shack',
   logo: {
     ariaLabel: "Yack-Shack homepage",
-    src: "/icons/96.webp",
+    src: "/icons/yak-logo.svg",
     alt: "Yack-Shack logo",
     link: '/'
   },
