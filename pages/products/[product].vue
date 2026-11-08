@@ -134,6 +134,11 @@ onMounted(() => {
   );
   const clientVariants = computed(() => result.value?.productByHandle.variants.edges)
   variants.value = clientVariants;
+
+  try {
+    const { $analytics } = useNuxtApp() as any;
+    $analytics?.track?.("view_product", { handle });
+  } catch {}
 });
 
 // remove current variant from state management on component destroy

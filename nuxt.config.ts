@@ -19,6 +19,10 @@ export default defineNuxtConfig({
       // DEMO_MODE defaults to true → serves the spoofed yak-fur catalog without Shopify.
       // Set DEMO_MODE=false in .env to connect to a live storefront instead.
       DEMO_MODE: process.env.DEMO_MODE !== 'false',
+      // Analytics (Umami) — empty website id disables tracking. Point umamiSrc at
+      // cloud.umami.is or a self-hosted instance.
+      umamiWebsiteId: process.env.NUXT_PUBLIC_UMAMI_WEBSITE_ID || '',
+      umamiSrc: process.env.NUXT_PUBLIC_UMAMI_SRC || 'https://cloud.umami.is/script.js',
     }
   },
   app: {

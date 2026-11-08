@@ -6,6 +6,15 @@ import { cartLinesUpdate } from "~/apollo/mutations/cartLinesUpdate";
 import { cartLinesRemove } from "~/apollo/mutations/cartLinesRemove";
 import { checkoutUrl } from "~/apollo/queries/checkoutUrl";
 import { formatLocalePrice } from "~/utils/money";
+import { useNuxtApp } from "#app";
+
+// Fire-and-forget analytics/log event. No-op when analytics is not configured.
+function track(eventName: string, props?: Record<string, unknown>) {
+  try {
+    const { $analytics } = useNuxtApp() as any;
+    $analytics?.track?.(eventName, props);
+  } catch {}
+}
 
 // TO-DO: provide apolloClient to pinia as plugin
 // https://pinia.vuejs.org/core-concepts/plugins.html#introduction
@@ -89,6 +98,7 @@ export const useCartStore = defineStore("cart", {
           throw "getCheckoutUrl: error";
         }
         this.cart.checkoutUrl = data?.checkoutUrl?.cart?.checkoutUrl ?? null;
+        track("begin_checkout", { cartId: this.cart.id });
         return this.cart.checkoutUrl;
       } catch (e) {
         return e;
@@ -125,6 +135,7 @@ export const useCartStore = defineStore("cart", {
         }
         this.cart = data?.cartLinesAdd?.cart;
         this.cartOpen = true;
+        track("add_to_cart", { merchandiseId, quantity });
       } catch (e) {
         throw e;
       } finally {
